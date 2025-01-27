@@ -1,16 +1,15 @@
-# Project Starter Structure
+# Project Structure
 
-Welcome to the **Project Starter Structure** repository! This project provides a clean, simple, and scalable structure for building modern applications using **TypeScript** and **JSX**. It ensures your app is easy to maintain, grow, and test while promoting consistency and reusability.
+This repository is designed to help developers start their applications with a clean and scalable architecture. The structure ensures ease of maintenance, testing, and scalability.
 
-## Features
+## Key Features
 
-- **Modular Structure:** Each file and folder serves a clear purpose.
-- **Reusability:** Build reusable components and utilities.
-- **Type Safety:** Fully powered by TypeScript for error-free development.
-- **Scalable Design:** Easily extend the project as your app grows.
-- **Testing-Friendly:** Simplifies the process of writing and running tests.
+- **Built with TypeScript:** Ensures type safety and prevents common coding errors.
+- **Uses Redux Toolkit and Saga:** Efficient state management with modern tools.
+- **Persist Storage with AsyncStorage:** State is persisted using AsyncStorage for seamless user experience.
+- **Modular Structure:** Well-organized folders for easy navigation and scalability.
 
-## Project Structure
+## Folder Structure
 
 ```
 app/
@@ -86,100 +85,60 @@ app/
 |-- tsconfig.json
 ```
 
-## Getting Started
+## Highlights of the Architecture
 
-Follow these steps to set up the project:
+1. **Redux Toolkit and Saga:**
+   - State management is handled with Redux Toolkit for simplicity and performance.
+   - Side effects are managed using Redux-Saga for better control and scalability.
 
-### Prerequisites
+2. **Persist State with AsyncStorage:**
+   - The Redux store state is persisted using AsyncStorage, ensuring the app retains state across sessions.
 
-- [Node.js](https://nodejs.org/) (v14 or above)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+3. **Modular Components:**
+   - Each component is self-contained, with separate `index.tsx` and `styles.tsx` files for better modularity.
 
-### Installation
+4. **Reusable Utilities:**
+   - Helper functions for tasks like authentication tokens and navigation services are centralized in the `helpers/` folder.
 
-1. Clone the repository:
+5. **Navigation Setup:**
+   - `navigator/` folder contains stack navigators and root navigation setup for consistent routing.
+
+6. **Theming and Styling:**
+   - Global styles, theming, and typography are handled in the `styles/` folder for consistent design.
+
+## Installation
+
+1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/project-starter-structure.git
+   git clone <your-github-repo-url>
    ```
 
-2. Navigate to the project directory:
-   ```bash
-   cd project-starter-structure
-   ```
-
-3. Install the dependencies:
+2. Install dependencies:
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
-### Running the Project
+3. Start the application:
+   ```bash
+   npm start
+   ```
 
-Start the development server:
-```bash
-npm start
-# or
-yarn start
-```
+4. To run on Android:
+   ```bash
+   ./run-android.sh
+   ```
 
-### Building the Project
+## Usage
 
-To create a production build:
-```bash
-npm run build
-# or
-yarn build
-```
-
-### Testing
-
-Run the test suite:
-```bash
-npm test
-# or
-yarn test
-```
-
-## How It Works
-
-### Key Directories
-
-- **`components/`**: Reusable UI components, each with its own `index.tsx` and `styles.tsx` files.
-- **`configs/`**: Configuration files for the app.
-- **`constants/`**: Application-wide constants such as images and strings.
-- **`global/`**: Shared components like loaders and flash messages.
-- **`helpers/`**: Utility functions for common tasks like navigation and authentication.
-- **`modules/`**: Organized modules for specific app features.
-- **`navigator/`**: Navigation logic and stack configurations.
-- **`redux/`**: State management files (reducers, sagas, and store).
-- **`service/`**: API services and endpoints.
-- **`styles/`**: Centralized styling files for themes, typography, and colors.
+- Modify or add new components under the `components/` folder.
+- Add new Redux slices or sagas in the `redux/` folder.
+- Add API endpoints and related logic in the `service/` folder.
+- Manage navigation in the `navigator/` folder.
 
 ## Contributing
 
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes and push them:
-   ```bash
-   git commit -m "Add new feature"
-   git push origin feature-name
-   ```
-4. Submit a pull request.
+Contributions are welcome! Feel free to submit a pull request or open an issue.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Feedback
-
-If you have any questions or suggestions, feel free to open an issue or reach out. Let's build something great together!
-
----
-
-Happy coding! 🚀
+This project is licensed under the MIT License.
